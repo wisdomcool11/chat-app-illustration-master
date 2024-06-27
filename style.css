@@ -1,0 +1,321 @@
+
+
+:root{
+    /*sub-heading at the top of the app ui*/
+    --pale_violet: hsl(276,100%,81%);
+    /* chat on the left */
+    --moderate_violet: hsl(276,55%,52%);
+    --moderate_violet_purple: hsl(298, 100%, 61%);
+    /* chat on the right */
+    --desaturated_dark_violet: hsl(271,15%,43%);
+    /* placeholder text */
+    --grayish_blue: hsl(0, 0%, 82%);
+    /* main heading */
+    --very_dark_desaturated_violet: hsl(271,36%,24%);
+    /* paragraph */
+    --dark_grayish_violet: hsl(270,7%,64%);
+    --white: #fff;
+    --toTop: linear-gradient(to top,  var(--very_dark_desaturated_violet),var(--moderate_violet_purple));
+    --toLeft: linear-gradient(to left,  var(--very_dark_desaturated_violet),var(--moderate_violet_purple));
+    --toRight: linear-gradient(to right,  var(--very_dark_desaturated_violet),var(--moderate_violet_purple));
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Rubik", sans-serif;    
+    background-color: #f1f1f1;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    max-width: 1376px;
+    height: 100vh;
+
+}
+
+
+.head__container{
+    background: var(--toTop);
+    width: 500px;
+    height: 600px;
+    border-bottom-left-radius: 42%;
+    border-bottom-right-radius: 51%;
+}
+
+/* mobile__chat__app container */
+.mobile__chat__app{
+    width: 350px;
+    /* height: 570px; */
+    /* height: 100%; */
+    margin-top: 5vh;
+    margin-left: -6vw;
+    border-radius: 27px;
+    padding: 7px;
+    background-color: var(--white);
+}
+.mobile__inner__border{
+    border: 3px solid var(--white);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.mobile___head{
+    /* this is the top head section */
+    background-image: var(--toRight);
+    background-origin: padding-box;
+    width: 100%;
+    height: 14vh;
+    padding: 0px 10px 10px 10px;
+}
+
+/* the top white box at the extrem top */
+.white__box__menu{
+    background-color: var(--white);
+    height: 28px;
+    width: 200px;
+    margin: 0 auto 8px auto;
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px ;
+}
+
+.mobile__header__content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* left side of the header styling */
+.left_header{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* imgs */
+.back__icon img{
+    width: 15px;
+}
+
+.profile__img img{
+    width: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* middle side of the header styling */
+.center__header{
+    width: 180px;
+}
+.center__header h2{
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: 3px;
+}
+.center__header p{
+    font-size: 0.765rem;
+    color: var(--grayish_blue) ;
+    letter-spacing: 1px;
+}
+
+/* the menu dots */
+.header__menu_right{
+    position: relative;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s ease-out;
+}
+.header__menu_right:hover{
+    transform: scale(0.8);
+}
+
+.header__menu_right::before{
+    content: '';
+    position: absolute;
+    font-size: 40px;
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    transform: translateY(-12px);
+    box-shadow: 0 12px #fff;
+    border-radius: 50%;
+}
+.header__menu_right::after{
+    content: '';
+    position: absolute;
+    font-size: 40px;
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    transform: translateY(12px);
+    border-radius: 50%;
+}
+
+.mobile__body{
+    width: 100%;
+    /* height: 100%; */
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+/* chats */
+.chat{
+    width:200px;
+    padding: 10px 8px;
+    border-radius: 8px;
+    font-size: 0.755rem;
+    color: var(--moderate_violet);
+    font-weight: 500;
+    background: var(--grayish_blue);
+}
+
+.right_chat{
+    align-self: flex-end;
+    background-color: var(--white);
+}
+
+/* dog image */
+.dogImg{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.dogImg img{
+    width: 50px;
+    border-radius: 8px ;
+}
+
+.amount{
+    background-image: var(--toLeft);
+    width:200px;
+    padding: 10px 11px;
+    border-radius: 8px;
+    font-size: 0.755rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+}
+.amount__wrap{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    height: 100%;
+}
+.round{
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--dark_grayish_violet);
+    border-radius: 50%;
+}
+
+.cash{
+    font-weight: 800;
+    font-size: 0.835rem;
+}
+
+.submit__wrap{
+    display: flex;
+    position: relative;
+    margin-top: 15px;
+}
+
+input[type = text]{
+ background-color: #ffffff;
+ border: 1px solid #aaa;
+ border: none;
+ width: 90%;
+ padding: 15px;
+ margin: auto;
+ border-radius: 10px;
+}
+
+.submit__wrap a{
+    background: var(--very_dark_desaturated_violet);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    right:20px;
+    top: 3px;
+    transition: background-color 0.5s ease,
+    transform 0.6s ease;
+}
+.submit__wrap a:hover{
+    background-color: var(--pale_violet);
+}
+.submit__wrap a:active{
+    transform: translateY(4px);
+}
+.submit__wrap img{
+    width: 15px;
+}
+
+
+/* other side */
+.simple__booking{
+    width: 420px;
+    align-self: center;
+    margin-left: 7vw;
+}
+
+.simple__booking h1{
+    color: var(--very_dark_desaturated_violet);
+    margin-bottom: 30px ;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.simple__booking p{
+    color: gray;
+    line-height: 27px;
+}
+
+/* responsvie media */
+@media (max-width: 774px) {
+    .container{
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        padding-bottom: 80px;
+    }
+    .head__container{
+        max-height: 700px;
+        margin-left: -300px;
+    }
+    .mobile__chat__app{
+        z-index: 10px;
+        margin-left:30px;
+        margin-top: -550px;
+        margin-bottom: 80px;
+    }
+    .simple__booking{
+        width: 385px;
+        margin: auto;
+        text-align: center;
+    }
+}

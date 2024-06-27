@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <!-- fav icone -->
+    <link rel="icon" type="image/x-icon" href="logo.jpeg">
+    <!-- local stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/9753f25b53.js" crossorigin="anonymous"></script>
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="head__container"></div>
+
+            <!-- The main app -->
+        <section class="mobile__chat__app">
+            <div class="mobile__inner__border">
+                <div class="mobile___head">
+                    <div class="white__box__menu"></div>
+        
+                    <div class="mobile__header__content">
+                        <div class="left_header">
+                            <span class="back__icon"> 
+                                <img src="arrow.png" alt="back arrow image">
+                            </span>
+                            <div class="profile__img">
+                                <img src="avater.jpeg" alt="image of the profile">
+                            </div>
+                        </div>
+
+                        <div class="center__header">
+                            <h2>Samuel Green</h2>
+                            <p>Available to Walk</p>
+                        </div>
+                        <div class="header__menu_right"></div>
+                    </div>
+                </div>
+
+                <div class="mobile__body">
+
+                    <p class="left_chat chat left-one">
+                        That sounds great. i'd be 
+                        happy with that.0 
+                    </p>
+                    <p class="left_chat chat left-two">
+                        Could you send over some
+                        picture of your dog, please?
+                    </p>
+                    <p class="dogImg">
+                        <img src="dog_img_1.jpeg" alt="happy dog one image">
+                        <img src="dog_img_2.jpeg" alt="happy dog two image">
+                        <img src="dog_img_3.jpeg" alt="happy dog three image">
+                    </p>
+                    <p class="right_chat chat right-one">
+                        Here are a few pictures. She's
+                        a happy girl
+                    </p>
+                    <p class="right_chat chat right-two">
+                        Can you make it?
+                    </p>
+                    <p class="left_chat chat left-three">
+                        She looks so happy! The time
+                        we discussed works. How 
+                        long shall i take her Out far?
+                    </p>
+
+                    <div class="amount-01 amount">
+                        <div class="amount__wrap">
+                            <span class="round"></span> 30 minute walk 
+                        </div>
+                        <span class="cash">$29</span>
+                    </div>
+
+                    <div class="amount-02 amount">
+                        <div class="amount__wrap">
+                            <span class="round"></span> 30 minute walk 
+                        </div>
+                        <span class="cash">$49</span>
+                    </div>
+                </div>
+
+                <div class="submit__wrap">
+                    <input type="text" placeholder="Type a message...">
+                    <a href="#"><img src="right_Arrow.png" alt="right arrow image"></a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="simple__booking">
+            <h1>simple booking</h1>
+            <p>
+                Stay in touch with our dog walker through the Chat
+                interface. This makes it easy to discuss arrangements and
+                make bookings. Once the walk has been completed you can
+                rate your walker and book again all through the chat.
+            </p>
+        </section>
+    </div>
+
+
+    <script>
+        ScrollReveal({
+            // reset: true,
+            distance: '660px',
+            duration: 1300,
+            delay: 400
+        })
+
+        ScrollReveal().reveal('.left-one',{delay: 300, origin: 'left'})
+        ScrollReveal().reveal('.left-two',{delay: 2000, origin: 'left'})
+        ScrollReveal().reveal('.dogImg img',{delay: 3000, origin: 'right', interval:500})
+        ScrollReveal().reveal('.right-one',{delay: 5000, origin: 'right'})
+        ScrollReveal().reveal('.right-two',{delay: 6000, origin: 'right'})
+        ScrollReveal().reveal('.left-three',{delay: 8600, origin: 'left'})
+        ScrollReveal().reveal('.amount',{delay: 11000, origin: 'left', interval: 300})
+        
+        /*
+            simple booking animation
+        */
+        ScrollReveal().reveal('.simple__booking h1',{delay: 13000, origin: 'bottom'})
+        ScrollReveal().reveal('.simple__booking p',{delay: 13500, origin: 'bottom'})
+    </script>
+
+
+
+</body>
+</html>
